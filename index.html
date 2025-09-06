@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz Cumpleaños!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="login-container" id="loginContainer">
+        <h1>¡Accede al Regalo!</h1>
+        <div class="input-group">
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" placeholder="Ingresa tu nombre">
+        </div>
+        <div class="input-group">
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" placeholder="Ingresa la contraseña">
+        </div>
+        <button onclick="validateLogin()">Ingresar</button>
+        <div class="error-message" id="errorMessage">Credenciales incorrectas. Intenta nuevamente.</div>
+    </div>
+    
+    <div class="letter-container" id="letterContainer">
+        <div class="envelope" id="envelope">
+            <div class="envelope-front">
+                <div class="envelope-heart">💖</div>
+            </div>
+            <div class="envelope-back">
+                <div class="envelope-heart pulse">✉️</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="letter" id="letter">
+        <div class="close-letter" onclick="closeLetter()">✕</div>
+        <div class="letter-content">
+            <div class="letter-header">
+                <h2>¡Feliz Cumpleaños!</h2>
+                <p>Para mi amiga especial</p>
+            </div>
+            <div class="letter-body">
+                <p>Querida amiga,</p>
+                <p>En este día tan especial, quería recordarte lo increíble que eres. Tu amistad es de las cosas mas bonitas que siempre te voy a agradecer que me hayas regalado.</p>
+                <p>Eres una persona única, con un corazón tan grande que puede abrazar al mundo entero. Tu bondad, tu sonrisa y tu forma de ver la vida son un regalo para todos los que te conocemos.</p>
+                <p>Aun que ya hoy no sea tu compleaños, quiero que sepas que, deseo que todo lo que le queda a este año hasta tu proximo cumple, sean los mas hermosos para ti.</p>
+                <p>¡Que este nuevo ciclo de vida te traiga tantas alegrías como bendiciones para ti y todos los que te aman!</p>
+                
+                <div class="carousel">
+                    <div class="carousel-inner" id="carouselInner">
+                        <!-- Imágenes de ejemplo - Reemplaza con tus URLs -->
+                        <div class="carousel-item">
+                            <div class="img-loading">Cargando imagen 1...</div>
+                            <img class="carousel-img" src="src\Imagen de WhatsApp 2025-09-05 a las 19.55.18_c14774f9.jpg" alt="Imagen de cumpleaños 1" onload="imageLoaded(this)">
+                        </div>
+                        <div class="carousel-item">
+                            <div class="img-loading">Cargando imagen 2...</div>
+                            <img class="carousel-img" src="src\Imagen de WhatsApp 2025-09-05 a las 19.55.20_1d84c652.jpg" alt="Imagen de cumpleaños 2" onload="imageLoaded(this)">
+                        </div>
+                        <div class="carousel-item">
+                            <div class="img-loading">Cargando imagen 3...</div>
+                            <img class="carousel-img" src="src\Imagen de WhatsApp 2025-09-05 a las 19.55.20_3409772a.jpg" alt="Imagen de cumpleaños 3" onload="imageLoaded(this)">
+                        </div>
+                    </div>
+                    <div class="carousel-control prev" onclick="prevSlide()">❮</div>
+                    <div class="carousel-control next" onclick="nextSlide()">❯</div>
+                    <div class="carousel-indicators">
+                        <div class="carousel-indicator active" onclick="goToSlide(0)"></div>
+                        <div class="carousel-indicator" onclick="goToSlide(1)"></div>
+                        <div class="carousel-indicator" onclick="goToSlide(2)"></div>
+                    </div>
+                </div>
+                
+                <p>Con todo mi cariño en tu día especial. Perdon la demora </p>
+            </div>
+            <div class="letter-footer">
+                <p>Del negro que vos mas queres Euromar.T</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="birthday-content" id="birthdayContent">
+        <h2>"Que nadie venga a ti, sin irse mejor y mas feliz✝️🌹" 🎂🎉</h2>
+        <p>¡Que esa fe tan hermosa que Dios nos mostro una vez, siga resplandeciento cada dia de tu vida. ¡Disfruta tu día al máximo, TQM! 🌸💖</p>
+        <button onclick="logout()">Cerrar</button>
+    </div>
+    
+    <div class="emoji-rain" id="emojiRain"></div>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
